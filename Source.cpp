@@ -121,8 +121,7 @@ int _tmain(int argc, TCHAR* argv[])
 		_tprintf(TEXT("This sample takes a file name as a parameter.\n"));
 		return 0;
 	}
-	hFile = CreateFile(argv[1], GENERIC_READ, FILE_SHARE_READ, NULL,
-		OPEN_EXISTING, 0, NULL);
+	hFile = CreateFile(argv[1], GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, 0, NULL);
 
 	if (hFile == INVALID_HANDLE_VALUE)
 	{
@@ -149,7 +148,7 @@ int _tmain(int argc, TCHAR* argv[])
     }
     else
     {
-		_tprintf(_T("File is not identical\n"));
+	_tprintf(_T("File is not identical\n"));
     }
     
     return 0;
